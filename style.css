@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('fundo-jogo.jpg'); /* Nome da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100-vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+    color: white;
+}
+
+/* Camada escura para destacar o texto */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.game-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
+.game-title {
+    font-size: 5rem;
+    letter-spacing: 10px;
+    text-shadow: 0 0 20px #ff8000, 0 0 40px #ff4500;
+    margin-bottom: 50px;
+    line-height: 1;
+}
+
+.game-title span {
+    font-size: 3rem;
+    color: #00d4ff;
+    text-shadow: 0 0 20px #00d4ff;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.menu-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 300px;
+    clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.menu-btn:hover {
+    background: #00d4ff;
+    color: black;
+    box-shadow: 0 0 30px #00d4ff;
+    transform: scale(1.1);
+    border-color: #fff;
+}
+
+.footer-info {
+    margin-top: 60px;
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
